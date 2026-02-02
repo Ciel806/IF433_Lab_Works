@@ -1,6 +1,6 @@
 package oop_00000135652_Ceryne.week01
 
-fun main(args: Array<String>) {
+fun main() {
     //variable definition
     val radius = 7.0
     val pi = 3.14
@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     println("Radius: $radius, Area: $area")
 
     //Logic check
-    checkSize(area)
+    println(checkSize(area))
 }
 
 fun checkSize(area: Double) =
