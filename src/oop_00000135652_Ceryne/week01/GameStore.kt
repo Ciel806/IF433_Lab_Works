@@ -4,6 +4,14 @@ fun main() {
     val gameTitle = "Wuthering Waves"
     val price = 250000
 
-    println("Game: $gameTitle ($price)")
+    val finalPrice = calculateDiscount(price)
+
+    println("Game: $gameTitle")
+    println("Original Price: $price")
+    println("Final price: $finalPrice")
 
 }
+
+fun calculateDiscount(price: Int): Int =
+    if (price > 500000) (price * 0.8).toInt()
+    else (price *0.9).toInt()
