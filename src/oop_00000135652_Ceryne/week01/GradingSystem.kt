@@ -10,14 +10,19 @@ fun main() {
 
     //tambahkan dibawah println
     val grade = when (score) {
-        in 90 ≤ .. ≤ 100 -> "A"
-        in 80 ≤ .. ≤ 89 -> "B"
-        in 70 ≤ .. ≤ 79 -> "C"
+        in 90..100 -> "A"
+        in 80..89 -> "B"
+        in 70..79 -> "C"
         else -> "D"
     }
 
     println("Grade kamu: $grade")
     println("Status: ${calculateStatus(score)}")
+
+    val studentId: String? = null
+    val idLength = studentId?.length ?: 0
+
+    println("Panjang ID: $idLength")
 }
 
 //tulis diluar main()
