@@ -2,14 +2,14 @@ package oop_00000135652_Ceryne.week01
 
 fun main(args: Array<String>) {
     //variable definition
-    var radius: Double = 7.0
-    var pi: Double = 3.14
+    val radius = 7.0
+    val pi = 3.14
 
     //calculation
-    var area: Duble = pi * radius
+    val area = pi * radius * radius
 
     //output concatenation
-    println("Radius: " + radius + ", Area: " + area)
+    println("Radius: $radius, Area: $area")
 
     //Logic check
     checkSize(area)
