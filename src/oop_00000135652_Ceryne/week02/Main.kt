@@ -11,7 +11,7 @@ fun main() {
     val name = scanner.nextLine()
 
     print("Masukkan NIM (Wajib 5 Karakter): ")
-    val nim = scanner.next()
+    var nim = scanner.next()
 
     scanner.nextLine() // bersihkan buffer newline (penyakit klasik scanner)
 
