@@ -3,7 +3,8 @@ package oop_00000135652_Ceryne.week02
 class Student (
     val name: String,
     val nim: String,
-    var major: String
+    var major: String,
+    var gpa: Double = 0.0,
 ){
     init {
         //vaidasi sederhana: cek panjang nim
