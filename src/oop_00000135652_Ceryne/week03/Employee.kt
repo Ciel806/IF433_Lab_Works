@@ -21,4 +21,8 @@ class Employee(val name: String) {
     fun printSatus() {
         println("Karyawan: $name, Rating: $performanceRating")
     }
+
+    //tax dihitung 10% dari gaji saat ini
+    val tax: Double
+        get() = salary * 0.1
 }
