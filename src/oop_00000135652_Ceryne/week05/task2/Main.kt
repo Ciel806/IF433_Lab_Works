@@ -13,5 +13,10 @@ fun main() {
     for (method in paymentList) {
         method.processPayment(75000.0)
 
+        if (method is EWallet) {
+            wallet.topUp(50000.0)
+            method.processPayment(75000.0)
+        }
+        println()
     }
 }
