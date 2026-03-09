@@ -1,6 +1,6 @@
 package oop_00000135652_Ceryne.week06.task
 
-interface SmartInterfaces {
+interface SmartDevice {
     val id: String
     val name: String
 }
