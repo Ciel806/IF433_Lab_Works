@@ -20,4 +20,10 @@ fun main() {
     val data2 = DataUser("Alice", 22)
     println(data1) //otomatis readable format
     println("Sama? ${data1 == data2}") //true
+
+    val data3 = data1.copy(age = 23)
+    println("Hasil Copy: $data3")
+
+    val (userName, userAge) = data1 // destructuring decalarion
+    println("Destructured: $userName berumur $userAge")
 }
