@@ -27,4 +27,15 @@ fun main() {
 
     val (userName, userAge) = data1 // destructuring decalarion
     println("Destructured: $userName berumur $userAge")
+
+
+    //LATIHAN TERBIMBING 3: ENUM & SEALED CLASSES
+    println("\n=== TEST SEALED CLASS ===")
+    val response: ApiResponse = ApiResponse.Success("Data berhasil ditarik!")
+
+    //ERROR: 'when' expression must be exhaustive
+    val uiMessage = when(response) {
+        is ApiResponse.Success -> "Tampilkan: ${response.data}"
+        is ApiResponse.Error -> "Munculkan alert: ${response.message}"
+    }
 }
