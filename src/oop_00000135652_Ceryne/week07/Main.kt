@@ -9,6 +9,7 @@ fun main() {
     val client = NetworkClient.createClient() //instansi lewat factory
     client.connect()
 
+    //LATIHAN TERBIMBING 2: DATA CLASS (THE BOILERPLATE KILLER
     println("\n=== TEST REGULAR CLASS ===")
     val reg1 = RegulerUser("Alice", 22)
     val reg2 = RegulerUser("Alice", 22)
