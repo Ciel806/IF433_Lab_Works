@@ -36,4 +36,9 @@ fun Main() {
             println("Ditemukan teks: ${it.uppercase()}")
         }
     }
+
+    val someObject: Any = 100 // tipe asliny int
+    //coba cast ke String. jika gagal (null), ganti dgn "unknown String"
+    val safeString = someObject as? String ?: "Unknown String"
+    println("Hasil cast + fallback: $safeString")
 }
