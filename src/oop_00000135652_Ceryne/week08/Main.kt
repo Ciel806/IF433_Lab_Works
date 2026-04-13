@@ -1,6 +1,6 @@
 package oop_00000135652_Ceryne.week08
 
-fun Main() {
+fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null, null)
 
