@@ -22,11 +22,11 @@ fun main() {
             val product = parser.parseProducts(raw)
 
             product?.let {
-                println("Processing Product: $it")
+                println("\nProcessing Product: $it")
                 parser.checkout(it)
             }
         } catch (e: IllegalArgumentException) {
-            println("Error: ${e.message}")
+            println("\nError: ${e.message}")
         }
     }
 }
