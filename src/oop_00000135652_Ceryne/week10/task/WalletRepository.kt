@@ -9,6 +9,16 @@ class WalletRepository<T> {
     fun getAll(): List<T> {
         return items
     }
+
+    fun findByName(query: String): T? {
+        return items.find { item ->
+            if (item is Coin) {
+                item.name.equals(query, ignoreCase = true)
+            } else {
+                false
+            }
+        }
+    }
 }
 
 
