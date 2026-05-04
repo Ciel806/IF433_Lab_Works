@@ -7,7 +7,14 @@ fun main() {
     //mengeksekusi blok hanya jika objek tidak null
     val length = name?.let {
         println("Nama Terdeteksi: $it") //it = name
-        it.length //kemabliin nilai expression terkahir
+        it.length //kembaliin nilai expression terkahir
     }
     println("Panjang nama: $length")
+
+    println("\n=== TEST RUN FUNCTION ===")
+    val result = "Kotlin".run {
+        println("Memproses kata: ${this}")
+        this.length * 2 // 'this' ditambahkan agar konteks length lebih jelas
+    }
+    println("Hasil kalkulasi run: $result")
 }
