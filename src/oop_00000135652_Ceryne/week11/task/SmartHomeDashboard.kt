@@ -44,4 +44,9 @@ fun main() {
         println(it.diagnose())
     }
 
+    println("\n=== SUMMARY ===")
+    with(homeDevices) {
+        println("Jumlah ukuran list: ${this.size}")
+    }
+
 }
