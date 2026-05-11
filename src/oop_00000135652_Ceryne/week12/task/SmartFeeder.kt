@@ -20,7 +20,7 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 fun main() {
     var currentKibbleStock = 50
 
-    println("=== JADWAL MAKAN 1 ===")
+    println("=== JADWAL MAKAN PAGI ===")
     try {
         dispenseKibble(80, currentKibbleStock, false)
         println("Sisa Stok: $currentKibbleStock")
@@ -37,7 +37,7 @@ fun main() {
     }
 
 
-    println("\n=== JADWAL MAKAN 2 ===")
+    println("\n=== JADWAL MAKAN SORE ===")
     runCatching { dispenseKibble(30, 1000, false) }
         .onSuccess {
             newStock -> currentKibbleStock = newStock
