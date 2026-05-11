@@ -20,6 +20,7 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 fun main() {
     var currentKibbleStock = 50
 
+    println("=== JADWAL MAKAN 1 ===")
     try {
         dispenseKibble(80, currentKibbleStock, false)
         println("Sisa Stok: $currentKibbleStock")
@@ -34,4 +35,9 @@ fun main() {
     finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+
+
+    println("\n=== JADWAL MAKAN 2 ===")
+    runCatching { dispenseKibble(30, 1000, false) }
+
 }
