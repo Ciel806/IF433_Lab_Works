@@ -30,4 +30,8 @@ fun main() {
     } catch (e: Exception) {
         println("ERROR: $e")
     }
+
+    finally {
+        println("Siklus pengecekan dispenser pagi selesai.")
+    }
 }
