@@ -11,8 +11,8 @@ fun main() {
     println("Teks berhasil di-append.")
 
     println("\n=== TEST READ TEXT ===")
-    val fulContent = file.readText()
-    println("Membaca sekaligus:\n$fulContent")
+    val fullContent = file.readText()
+    println("Membaca sekaligus:\n$fullContent")
 
     println("=== TEST READ LINES ===")
     val lines = file.readLines()

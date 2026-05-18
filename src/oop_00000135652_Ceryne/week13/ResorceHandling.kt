@@ -1,0 +1,20 @@
+package oop_00000135652_Ceryne.week13
+
+import java.io.File
+
+fun main() {
+    println("=== TEST UNSAFE RESOURCE HANDLING ===")
+    val unsafeFile = File("unsafe_logs.txt")
+    //buka stream scr manual
+    val writer = unsafeFile.printWriter()
+
+    writer.println("Log 1: Membuka koneksi database...")
+    writer.println("Log 2: Menulis data pengguna...")
+
+    //BAHAYA: jika terjadi exception di baris ini (misalnya pembagian dengan nol atau error tak terduga)
+    //program akan crash dan metode writer.close() dibawahnya TIDAK AKAN PERNAH TERKSEKUSI
+    //file akan terus terkunci oleh OS
+
+    writer.close()
+    println("Proses penulisan unsafe selesai.")
+}
