@@ -27,3 +27,12 @@ fun fromCsvTrade(line: String): TradeRecord? {
 fun saveTrades(trades: List<TradeRecord>, path: String) {
     File(path).writeText(trades.joinToString("\n") { it.toCsv() })
 }
+
+fun loadtrades(path: String): List<TradeRecord> {
+    return try {
+        File(path).readLines().mapNotNull { fromCsvTrade(it) }
+    } catch (e: FileNotFoundException) {
+        println("Error: File tidak ditemukan!")
+        emptyList()
+    }
+}
