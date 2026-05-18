@@ -23,3 +23,7 @@ fun fromCsvTrade(line: String): TradeRecord? {
         null
     }
 }
+
+fun saveTrades(trades: List<TradeRecord>, path: String) {
+    File(path).writeText(trades.joinToString("\n") { it.toCsv() })
+}
