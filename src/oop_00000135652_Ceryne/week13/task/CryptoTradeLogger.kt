@@ -28,7 +28,7 @@ fun saveTrades(trades: List<TradeRecord>, path: String) {
     File(path).writeText(trades.joinToString("\n") { it.toCsv() })
 }
 
-fun loadtrades(path: String): List<TradeRecord> {
+fun loadTrades(path: String): List<TradeRecord> {
     return try {
         File(path).readLines().mapNotNull { fromCsvTrade(it) }
     } catch (e: FileNotFoundException) {
@@ -43,4 +43,8 @@ fun main(){
         TradeRecord(2, "ETHUSDT", "Short", 250.0, -45.10)
     )
     saveTrades(trades, path = "crypto_trades.csv")
+
+    File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY")
+
+
 }
